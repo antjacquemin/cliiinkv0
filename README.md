@@ -5,6 +5,9 @@ Le stage Cliiink, en association avec la [Communauté d’Agglomération Cannes 
 
 ## Credits
 [Anthony JACQUEMIN](https://github.com/antjacquemin)
+
 [Lukas CLAVE](https://github.com/LukasClave06)
+
 [Stéphane FERNANDES]()
+
 [Tarek BOUHARAOUI](https://github.com/Tbouharaoui)
