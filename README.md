@@ -8,6 +8,6 @@ Le stage Cliiink, en association avec la [Communauté d’Agglomération Cannes 
 
 [Lukas CLAVE](https://github.com/LukasClave06)
 
-[Stéphane FERNANDES]()
+[Stéphane FERNANDES](https://github.com/fernandes-stephane)
 
 [Tarek BOUHARAOUI](https://github.com/Tbouharaoui)
