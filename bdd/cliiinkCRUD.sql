@@ -472,6 +472,7 @@ CREATE PROCEDURE PL_CollecteurByGlobalid(IN globalidCollecteur VARCHAR(38))
     WHERE globalid = globalidCollecteur$$    
     
 # Affiche le collecteur selon les coordonnées
+-- La précision de la localisation dépendra de la précision des coordonnées 
 CREATE PROCEDURE PL_CollecteurByCoordonnees(IN _xCollecteur FLOAT, IN _yCollecteur FLOAT)
 	SELECT objectid, id, volume, quantite, dateInstallation, adresse, adresseComplement, codeInsee, observations, createur, dateCreation, modificateur, dateModification, globalid, _x, _y, idCategorie, idtri, idMarque FROM collecteur
     WHERE _x = _xCollecteur AND _y = _yCollecteur$$      
@@ -479,10 +480,10 @@ CREATE PROCEDURE PL_CollecteurByCoordonnees(IN _xCollecteur FLOAT, IN _yCollecte
 # Affiche le collecteur selon les coordonnées avec une marge d'erreur
 -- Affiche les collecteurs dans une zone centrée sur les coordonnées données 
 -- avec une marge de +-8m en longitude et +-11m en latitude 
--- (marge correspodant à 1° en longitude et latitude pour une latitude approximatice de Cannes à 45° et une précision 0.0000001)
+-- (marge correspodant à 1° en longitude et latitude pour une latitude approximatice de Cannes à 45° et une précision 0.0001)
 CREATE PROCEDURE PL_CollecteurByCoordonneesMarge(IN _xCollecteur FLOAT, IN _yCollecteur FLOAT)
 	SELECT objectid, id, volume, quantite, dateInstallation, adresse, adresseComplement, codeInsee, observations, createur, dateCreation, modificateur, dateModification, globalid, _x, _y, idCategorie, idtri, idMarque FROM collecteur
-    WHERE _x > _xCollecteur - 0.0000001 AND _x < _xCollecteur + 0.0000001 AND _y > _yCollecteur - 0.0000001 AND _y < _yCollecteur + 0.0000001$$      
+    WHERE _x > _xCollecteur - 0.0001 AND _x < _xCollecteur + 0.0001 AND _y > _yCollecteur - 0.0001 AND _y < _yCollecteur + 0.0001$$      
 
 # Affiche les collecteurs selon l'ientifiant de catégorie
 CREATE PROCEDURE PL_CollecteurByIdCategorie(IN idCategorie SMALLINT)
@@ -970,6 +971,7 @@ CREATE PROCEDURE PL_DecheterieByGlobalid(IN globalidDecheterie VARCHAR(38))
     WHERE globalid = globalidDecheterie$$    
     
 # Affiche la déchèterie selon les coordonnées
+-- La précision de la localisation dépendra de la précision des coordonnées 
 CREATE PROCEDURE PL_DecheterieByCoordonnees(IN _xDecheterie FLOAT, IN _yDecheterie FLOAT)
 	SELECT objectid, id, dateInstallation, adresse, adresseComplement, codeInsee, observations,	createur, dateCreation, modificateur, dateModification, globalid, _x, _y FROM decheterie
     WHERE _x = _xDecheterie AND _y = _yDecheterie$$      
@@ -977,10 +979,10 @@ CREATE PROCEDURE PL_DecheterieByCoordonnees(IN _xDecheterie FLOAT, IN _yDecheter
 # Affiche la déchèterie selon les coordonnées avec une marge d'erreur
 -- Affiche les déchèteries dans une zone centrée sur les coordonnées données 
 -- avec une marge de +-8m en longitude et +-11m en latitude 
--- (marge correspodant à 1° en longitude et latitude pour une latitude approximatice de Cannes à 45° et une précision 0.0000001)
+-- (marge correspodant à 1° en longitude et latitude pour une latitude approximatice de Cannes à 45° et une précision 0.0001)
 CREATE PROCEDURE PL_DecheterieByCoordonneesMarge(IN _xDecheterie FLOAT, IN _yDecheterie FLOAT)
 	SELECT objectid, id, dateInstallation, adresse, adresseComplement, codeInsee, observations,	createur, dateCreation, modificateur, dateModification, globalid, _x, _y FROM decheterie
-    WHERE _x > _xDecheterie - 0.0000001 AND _x < _xDecheterie + 0.0000001 AND _y > _yDecheterie - 0.0000001 AND _y < _yDecheterie + 0.0000001$$      
+    WHERE _x > _xDecheterie - 0.0001 AND _x < _xDecheterie + 0.0001 AND _y > _yDecheterie - 0.0001 AND _y < _yDecheterie + 0.0001$$      
 
 -- UPDATE
 
