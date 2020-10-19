@@ -7,7 +7,7 @@ Le stage Cliiink, en association avec la [Communauté d’Agglomération Cannes 
 Ce répertoire contient tous les codes et documents nécessaires pour reproduire les résultats obtenus dans le rapport de synthèse qui est également fourni
 
 ## Copyright
-Toute exploitation ou réutilisation de ce code n'est possible qu'après accord explicite ; veuillez formuler votre demande sur ce [courriel](anthonyjacquemin@hotmail.fr)
+Toute exploitation ou réutilisation de ce code n'est possible qu'après accord explicite ; veuillez formuler votre demande sur ce [courriel](mailto:anthonyjacquemin@hotmail.fr?subject=Cliiink)
 
 ## Credits
 [Anthony JACQUEMIN](https://github.com/antjacquemin)
